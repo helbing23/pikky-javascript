@@ -2,7 +2,7 @@ var APIKey = "fd4wE1b8ZupiBRU_i-INo4OQGKELTHmdfL5O-6fP4H0";
 var currentList;
 
 $("#button-addon1").click(function () {
-    $(".image").remove();
+    $(".card").remove();
     var search = $("input").val();
     console.log(search);
     $.getJSON(
@@ -16,8 +16,8 @@ $("#button-addon1").click(function () {
                 var imageURL = val.urls.regular;
                 var imageLink = val.links.html;
 
-                $(".grid").append(
-                    '<div class="image"><a href="' + imageLink + '" target="_blank"><img src="' + imageURL + '"></a></div>')
+                $(".card-list").append(
+                    '<div class="card col-md-4"><a href="' + imageLink + '" target="_blank"><img class="card-image" src="' + imageURL + '"></a></div>')
 
                 console.log("append");
 
@@ -27,7 +27,7 @@ $("#button-addon1").click(function () {
 });
 
 $("#portrait").click(function () {
-    $(".image").remove();
+    $(".card").remove();
     var search = $("input").val();
     console.log(search);
 
@@ -39,8 +39,8 @@ $("#portrait").click(function () {
         var imageLink = val.links.html;
 
         if (imageHeight > imageWidth) {
-            $(".grid").append(
-                '<div class="image"><a href="' + imageLink + '" target="_blank"><img src="' + imageURL + '"></a></div>')
+            $(".card-list").append(
+                '<div class="card col-md-4"><a href="' + imageLink + '" target="_blank"><img class="card-image" src="' + imageURL + '"></a></div>')
         }
         console.log("append");
     });
@@ -48,7 +48,7 @@ $("#portrait").click(function () {
 });
 
 $("#landscape").click(function () {
-    $(".image").remove();
+    $(".card").remove();
     var search = $("input").val();
     console.log(search);
 
@@ -60,8 +60,8 @@ $("#landscape").click(function () {
         var imageLink = val.links.html;
 
         if (imageHeight < imageWidth) {
-            $(".grid").append(
-                '<div class="image"><a href="' + imageLink + '" target="_blank"><img src="' + imageURL + '"></a></div>')
+            $(".card-list").append(
+                '<div class="card col-md-4"><a href="' + imageLink + '" target="_blank"><img class="card-image" src="' + imageURL + '"></a></div>')
         }
         console.log("append");
     });

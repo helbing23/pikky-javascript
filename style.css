@@ -61,6 +61,19 @@ input.form-control {
 .grid img{
     border-radius: 10px;
 }
+.card-list {
+    column-count: 3;
+  }
+  .card {
+    margin-bottom: 1rem;
+    display: flex;
+  }
+  
+  .card-image {
+    flex: 100%;
+    margin-top: 1rem;
+    border-radius: 10px;
+  }
 
 @media (max-width:767px){
     #landscape{
